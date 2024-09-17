@@ -6,106 +6,135 @@
     <title>At The Tolbooth</title>
     <style>
         body {
+            max-width: 1400px;
             font-family: "Times New Roman", Times, serif;
-            background-color: #ffffff;
+            background-color: #FFFFFF;
             color: #000000;
-            margin: 0;
-            padding: 0;
+            margin: 10vh auto;
+            padding: 0 20px;
             display: flex;
         }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
         .sidebar {
-         	position:fixed
-			width: 30%;
+            position: fixed;
+            width: 30%;
             padding: 20px;
-            text-align: center;
         }
+
         .sidebar img {
-            max-width: 80%;
+			z-index:-1;
+            width: 100%;
             height: auto;
-            border: 1px solid #ccc;
         }
+
         .main-content {
-            width: 70%;
+            flex-grow: 1;
             padding: 20px;
             text-align: right;
+            margin-left: 32%; /* Leave space for the fixed sidebar */
         }
-        header {
-            text-align: right;
-            margin-bottom: 20px;
-        }
-        header h1 {
-            font-size: 2em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1em;
-            margin: 5px 0 0 0;
-        }
-        nav {
-            text-align: right;
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin-left: 10px;
-            text-decoration: none;
-            color: #0000FF;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
+
         .post {
             margin-bottom: 30px;
         }
+
         .post-title {
-            font-size: 1.5em;
+            font-size: 1em;
+            text-decoration: underline;
             margin: 0;
         }
+
         .post-meta {
             font-size: 0.9em;
             color: #666666;
             margin: 5px 0;
         }
+
+        header {
+            margin-bottom: 2rem;
+        }
+
+        header nav {
+            justify-content: flex-end; /* Right-align the links */
+            align-items: baseline;
+            column-gap: 2ch;
+            flex-wrap: wrap;
+        }
+
+        header a {
+            font-style: normal;
+            color: rgba(0, 0, 0, 1);
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        header .title {
+            font-size: 1.25em;
+            margin-right: auto; /* This pushes the links to the right */
+        }
+
         footer {
-       		position:fixed; 
-			bottom: 0;
-			text-align: right;
+            text-align: right;
             margin-top: 50px;
             font-size: 0.9em;
         }
+		
+		ul {
+			list-style-position: inside;
+			text-align: right;
+		}
+
+		li {
+			background-position: 100% .4em;
+			padding-right: .6em;
+		}
+
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="./resources/texh-side.jpg" alt="texhnolyze 4eva <33">
+        </div>
 
-<div class="sidebar">
-	<img src="./resources/texh-side.jpg" alt="texhnolyze 4eva <33">
-</div>
+        <div class="main-content">
+            <header>
+                <nav>
+                    <a class="title" href="./home.html">The Doldrums</a>
+					<a style="padding-left:10px"></a>
+                    <a href="./cv.html">CV</a>
+                </nav>
+            </header>
+            <p>Bewitched by magical sand.</p>
+            <a href="mailto:m_pn00@protonmail.ch">m_pn00@protonmail.ch</a><br/>
+			<h3>currently...</h3>
+            <ul>
+                <li>studying at UBC</li>
+                <li>working with barrelfish</li>
+                <li>herding ASTs</li>
+				<li>untangling knots </br>(it's triangle replacement all the way down)</li>
+            </ul>
 
-<div class="main-content">
-    <header>
-        <h1>The Doldrums</h1>
-        <p>A journey in a little toy car</p>
-    </header>
+            <p style="margin:60px"></p>
 
-    <nav>
-        <a href="./home.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./cv.html">CV</a>
-        <a href="./contact.html">Contact</a>
-    </nav>
+            <div class="post">
+                <div href="./posts/test.html" class="post-title">Like fish in a barrel...</div>
+                <div class="post-meta">16/09/2024</div>
+            </div>
 
-    <div class="post">
-        <div class="post-title">Posts to come :)</div>
-        <div class="post-meta">Soon</div>
-        <p>Lorem ipsum dolor sit amet...</p>
-        <a href="#">Read more</a>
+            <footer>
+                <p>&copy; 2024 Milo Piccini Noble</p>
+            </footer>
+        </div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Milo Piccini Noble</p>
-    </footer>
-
-</div>
-
 </body>
 </html>
 
